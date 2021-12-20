@@ -11,7 +11,6 @@ body {
     height: 100vh;
 }
 
-
 header {
     grid-area: header;
 
@@ -24,11 +23,11 @@ background: #302950;
     margin: 0;
 }
 
-
 header #title {
     grid-area: title;
     margin: 0;
 }
+
 h1{
     /*color: #b5d2ec;*/
     color: #c6cdd7;
@@ -39,13 +38,13 @@ header #logo {
     margin: 0;
 
 }
+
 header #logo .img_logo{
     width: 60%;
     height: 70%;
     padding-top: 5%;
     /*padding-bottom: 1%;*/
 }
-
 
 main {
     grid-area: main;
@@ -60,19 +59,7 @@ main section{
     margin-top: 30px;
 }
 
-#base {
-
-
-}
-
-#months {
-
-
-}
-
-
 #bonus {
-
     display: flex;
 }
 
@@ -81,6 +68,7 @@ label{
     font-weight:bold;
     text-align:right;
 }
+
 input{
     font-size:11px;
     padding:5px 2px;
@@ -92,6 +80,7 @@ input{
 #calc {
     margin-top: 50px;
 }
+
 button{
     font-size: 15px;
     border-radius: 25px;
