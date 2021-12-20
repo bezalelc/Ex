@@ -47,13 +47,16 @@ function add(myTax) {
     } else {
         var newDiv = $("<div><div/>").addClass("Tax");
         newDiv[0].innerHTML = txt;
-        newDiv[0].style.fontsize = "x-large";
+        // newDiv[0].style.fontsize = "50px";
         newDiv[0].style.color = "red";
+        // newDiv.css("fontsize", "100px");
         $("main:last").append(newDiv);
     }
 }
 
 $(document).ready(function () {
+    // $('[type=checkbox]')
+
     let p;
     $('[type=checkbox]').change(function () {
         if ($(this).is(':checked')) {
@@ -64,7 +67,7 @@ $(document).ready(function () {
                 p = null;
             }
         }
-    });
+    }).prop('checked', false).checkboxradio('refresh');
 
     $("#Calculate").click(function () {
         let myTax = calculate(p);
@@ -72,3 +75,4 @@ $(document).ready(function () {
     });
 
 });
+
