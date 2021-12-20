@@ -13,59 +13,83 @@
 
 
 <header>
-    <h1>Tax Calculator</h1>
+    <div id = "title">
+        <h1>Tax Calculator</h1>
+    </div>
+    <div id = "logo">
+        <img class = "img_logo" src="https://www.bankrate.com/2021/08/04110958/GettyImages-12269112171.jpg?auto=webp&optimize=high&crop=16:9">
+    </div>
 </header>
 
 
 <main>
     <section id="base">
         <label class="input-text-label" for="a">Base Salary<input type="text" class="input-text" id="a"></label>
-
         <label><input type="checkbox">For 12 Months</label>
-
     </section>
-    <section id="months">
 
-        <div id="stylized" class="myform">
-            <label for="January">January</label><input type="text" id="January" class="input-text">
-            <p></p>
-            <label for="February">February</label><input type="text" id="February" class="input-text">
-            <p></p>
-            <label for="March">March</label><input type="text" id="March" class="input-text">
-            <p></p>
-            <label for="April">April</label><input type="text" id="April" class="input-text">
-            <p></p>
-            <label for="May">May</label><input type="text" id="May" class="input-text">
-            <p></p>
-            <label for="June">June</label><input type="text" id="June" class="input-text">
-            <p></p>
-            <label for="July">July</label><input type="text" id="July" class="input-text">
-            <p></p>
-            <label for="August">August</label><input type="text" id="August" class="input-text">
-            <p></p>
-            <label for="September">September</label><input type="text" id="September" class="input-text">
-            <p></p>
-            <label for="October">October</label><input type="text" id="October" class="input-text">
-            <p></p>
-            <label for="November">November</label><input type="text" id="November" class="input-text">
-            <p></p>
-            <label for="December">December</label><input type="text" id="December" class="input-text">
-        </div>
+    <section id="months">
+        <table>
+            <tbody>
+            <tr>
+                <td><label for="January">January</label></td>
+                <td>   <input type="text" id="January" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="February">February</label></td>
+                <td><input type="text" id="February" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="March">March</label></td>
+                <td><input type="text" id="March" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="April">April</label></td>
+                <td><input type="text" id="April" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="May">May</label></td>
+                <td><input type="text" id="May" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="June">June</label></td>
+                <td><input type="text" id="June" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="July">July</label></td>
+                <td><input type="text" id="July" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="August">August</label></td>
+                <td><input type="text" id="August" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="September">September</label></td>
+                <td><input type="text" id="September" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="October">October</label></td>
+                <td><input type="text" id="October" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="November">November</label></td>
+                <td><input type="text" id="November" class="input-text"></td>
+            </tr>
+            <tr>
+                <td><label for="December">December</label></td>
+                <td><input type="text" id="December" class="input-text"></td>
+            </tr>
+            </tbody>
+        </table>
     </section>
 
     <section id="bonus">
-        <label class="input-text-label">Bonus point
-            <input type="text" class="input-text">
-        </label>
-
+        <label for = "BonusPoint">Bonus point:<input type="text" id = "BonusPoint" class="input-text"></label>
     </section>
 
     <section id="calc">
-        <section id="summery">
-            <button>Calculate</button>
-        </section>
+        <button>Calculate</button>
     </section>
-
 
 </main>
 </body>

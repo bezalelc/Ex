@@ -1,89 +1,99 @@
 
 body {
     display: grid;
-    grid-template-rows:1fr 7fr;
+    grid-template-rows:0.1fr 10fr;
     grid-template-areas:
-     "header "
+     "header"
       "main";
     margin: 0;
+
+    width: 100vw;
+    height: 100vh;
 }
 
 
 header {
     grid-area: header;
-    background-color: royalblue;
+
+    display: grid;
+    grid-template-columns: 7fr 2fr;
+    grid-template-areas:
+    "title pic";
+background: #302950;
+    /*background: #0b62b0;*/
+    margin: 0;
+}
+
+
+header #title {
+    grid-area: title;
+    margin: 0;
+}
+h1{
+    /*color: #b5d2ec;*/
+    color: #c6cdd7;
+}
+
+header #logo {
+    grid-area: pic;
     margin: 0;
 
 }
+header #logo .img_logo{
+    width: 60%;
+    height: 70%;
+    padding-top: 5%;
+    /*padding-bottom: 1%;*/
+}
+
 
 main {
     grid-area: main;
-    background-color: slategray;
-
-    display: grid;
-    grid-template-rows:2fr 15fr 2fr 4fr;
-    grid-template-areas:
-      "base "
-      "months"
-      "bonus"
-      "calc";
-
+    /*background-color: #bdd5e3;*/
+    background-color: #d1d9e3;
+    display: flex;
+    flex-direction:column;
     margin: 0;
 }
 
-#base {
-    grid-area: base;
-    background-color: yellow;
+main section{
+    margin-top: 30px;
+}
 
-    display: flex;
+#base {
+
+
 }
 
 #months {
-    grid-area: months;
-    background-color: darkmagenta;
-    display: flex;
-    flex-direction: column;
-}
 
-/*.myform{*/
-/*    margin:0 auto;*/
-/*    padding:14px;*/
-/*}*/
-/*#stylized{*/
-/*    border-width:1px;*/
-/*    border-style:solid;*/
-/*    border-color:#b7ddf2;*/
-/*    background:#ebf4fb;*/
-/*}*/
 
-/*#stylized label{*/
-/*    font-size:11px;*/
-/*    font-weight:bold;*/
-/*    text-align:right;*/
-/*}*/
-#stylized input{
-    /*font-size:11px;*/
-    /*padding:4px 2px;*/
-    /*border:solid 1px #aacfe4;*/
-    /*width:70px;*/
-    /*margin:2px 0 20px 10px;*/
-display: table;
 }
 
 
 #bonus {
-    grid-area: bonus;
-    background-color: chartreuse;
+
+    display: flex;
+}
+
+label{
+    font-size:17px;
+    font-weight:bold;
+    text-align:right;
+}
+input{
+    font-size:11px;
+    padding:5px 2px;
+    border:solid 1px #aacfe4;
+    margin-left:50px;
+    /*padding-left: 5%;*/
 }
 
 #calc {
-    grid-area: calc;
-    background-color: aqua;
+    margin-top: 50px;
 }
-
-/* .input-text {
-    /*before("          ")*/
-/*position: static;*/
-/*margin-left: 10ch;*/
-/*display: inline-block;
-} */
+button{
+    font-size: 15px;
+    border-radius: 25px;
+    padding:7px 20px 7px 20px;
+}
