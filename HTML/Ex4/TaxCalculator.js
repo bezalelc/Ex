@@ -11,6 +11,7 @@ function calculate(p){
 
     if(p){
         sum = parseFloat(BaseSalary[0].value)*12;
+        alert(sum);
     }else{
         for(let i = 0; i < 12; i++){
             if(salary[i].value !== "")
