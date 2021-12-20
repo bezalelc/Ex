@@ -11,6 +11,7 @@ function calculate(p){
 
     if(p){
         sum = parseFloat(BaseSalary[0].value)*12;
+        alert(sum);
     }else{
         for(let i = 0; i < 12; i++){
             if(salary[i].value !== "")
@@ -27,6 +28,7 @@ function calculate(p){
             myTax += (tax[i][0]*tax[i][1])/100;
         else
             myTax += (sum*tax[i][1])/100;
+
         sum -= tax[i][0];
         i++;
     }
@@ -35,7 +37,6 @@ function calculate(p){
         if(myTax < 0)
             myTax = 0;
     }
-    alert(myTax);
     return myTax;
 }
 
