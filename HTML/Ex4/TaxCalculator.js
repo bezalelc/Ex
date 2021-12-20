@@ -10,7 +10,6 @@ function calculate(p) {
 
     if (p) {
         sum = parseFloat(BaseSalary[0].value) * 12;
-        alert(sum);
     } else {
         for (let i = 0; i < 12; i++) {
             if (salary[i].value !== "")
@@ -47,32 +46,30 @@ function add(myTax) {
     } else {
         var newDiv = $("<div><div/>").addClass("Tax");
         newDiv[0].innerHTML = txt;
-        // newDiv[0].style.fontsize = "50px";
         newDiv[0].style.color = "red";
-        // newDiv.css("fontsize", "100px");
         $("main:last").append(newDiv);
     }
 }
 
 $(document).ready(function () {
-    // $('[type=checkbox]')
+    let totalTaxDiv;
+    let checkbox = $('[type=checkbox]');
+    checkbox.prop('checked', false);
 
-    let p;
-    $('[type=checkbox]').change(function () {
+    checkbox.change(function () {
         if ($(this).is(':checked')) {
-            p = $("#months").fadeOut("slow");
+            totalTaxDiv = $("#months").fadeOut("slow");
         } else {
-            if (p) {
-                p.fadeIn("slow");
-                p = null;
+            if (totalTaxDiv) {
+                totalTaxDiv.fadeIn("slow");
+                totalTaxDiv = null;
             }
         }
-    }).prop('checked', false).checkboxradio('refresh');
+    });
 
     $("#Calculate").click(function () {
-        let myTax = calculate(p);
+        let myTax = calculate(totalTaxDiv);
         add(myTax);
     });
 
 });
-
