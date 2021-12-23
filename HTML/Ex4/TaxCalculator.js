@@ -1,4 +1,5 @@
-let tax = [[74640, 10], [32388, 14], [64788, 20], [66948, 31], [21509, 35], [11922, 47]];
+
+let tax = [[74640, 10], [32400, 14], [64800, 20], [66960, 31], [258120, 35], [143076, 47]];
 
 function calculate(p) {
 
@@ -16,10 +17,12 @@ function calculate(p) {
                 sum += parseFloat(salary[i].value);
         }
     }
+    alert(sum);
     let i = 0;
     while (sum > 0) {
         if (i === 6) {
-            myTax += (sum / 50);
+            myTax += (sum / 2);
+            alert(myTax);
             break;
         }
         if (sum > tax[i][0])
@@ -28,6 +31,7 @@ function calculate(p) {
             myTax += (sum * tax[i][1]) / 100;
 
         sum -= tax[i][0];
+        alert(myTax);
         i++;
     }
     if (BonusPoint !== null) {
