@@ -17,12 +17,10 @@ function calculate(p) {
                 sum += parseFloat(salary[i].value);
         }
     }
-    alert(sum);
     let i = 0;
     while (sum > 0) {
         if (i === 6) {
             myTax += (sum / 2);
-            alert(myTax);
             break;
         }
         if (sum > tax[i][0])
@@ -31,7 +29,6 @@ function calculate(p) {
             myTax += (sum * tax[i][1]) / 100;
 
         sum -= tax[i][0];
-        alert(myTax);
         i++;
     }
     if (BonusPoint !== null) {
